@@ -8,6 +8,7 @@ import SocialLogin from './SocialLogin/SocialLogin';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import axios from 'axios';
+import useToken from '../../Hooks/useToken'
 
 const Login = () => {
 
@@ -22,7 +23,7 @@ const Login = () => {
     ] = useSignInWithEmailAndPassword(auth);
 
 
-
+    const [token] = useToken(user);
     const emailRef = useRef('');
     const passwordRef = useRef('');
     const navigate = useNavigate();
@@ -34,9 +35,7 @@ const Login = () => {
 
         await signInWithEmailAndPassword(email, password);
         const { data } = await axios.post('https://mysterious-eyrie-16544.herokuapp.com/login', { email });
-        console.log(data);
         localStorage.setItem('accessToken', data.accessToken);
-        navigate(from, { replace: true });
     }
 
     const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(auth);
@@ -56,9 +55,9 @@ const Login = () => {
         navigate('/register');
     }
 
-    // if (user) {
-
-    // }
+    if (token) {
+        navigate(from, { replace: true });
+    }
 
     let errorElement;
     if (error) {

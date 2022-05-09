@@ -4,10 +4,13 @@ import './Register.css'
 import { useCreateUserWithEmailAndPassword, useUpdateProfile } from 'react-firebase-hooks/auth';
 import auth from '../../../firebase.init'
 import SocialLogin from '../SocialLogin/SocialLogin';
+import useToken from '../../../Hooks/useToken';
 
 const Register = () => {
 
     const [agree, setAgree] = useState(false);
+
+    const [token] = useToken(user);
 
     const [
         createUserWithEmailAndPassword,
@@ -22,9 +25,9 @@ const Register = () => {
         navigate('/login');
     }
 
-    // if (user) {
-    //     navigate('/home');
-    // }
+    if (token) {
+        navigate('/home');
+    }
 
     const [updateProfile, updating, updateError] = useUpdateProfile(auth);
 
@@ -37,7 +40,7 @@ const Register = () => {
         await createUserWithEmailAndPassword(email, password);
         await updateProfile({ displayName: name });
         alert('Updated profile');
-        navigate('/home');
+        // navigate('/home');
     }
 <b></b>
     return (
@@ -55,7 +58,7 @@ const Register = () => {
 
                 <input disabled={!agree} className='w-50 mx-auto btn btn-primary mt-2' type="submit" value="Register" />
             </form>
-            <p>
+            <p> 
                 Already Registered?
                 <Link to="/login" className="text-primary text-decoration-none" onClick={navigateLogin}>
                     Please Login
