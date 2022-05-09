@@ -31,15 +31,16 @@ const Header = () => {
 
           <Nav>
             <Nav.Link className='text-light' as={Link} to="home">Home</Nav.Link>
-            <Nav.Link href="home#equipments">Equipments</Nav.Link>
-            <Nav.Link as={Link} to="blog">Blog</Nav.Link>
+            <Nav.Link className='text-light' href="home#equipments">Equipments</Nav.Link>
+            <Nav.Link className='text-light' as={Link} to="blog">Blog</Nav.Link>
             {
               user && <>
-                <Nav.Link as={Link} to="manageinventory">Manage Inventory</Nav.Link>
+                <Nav.Link className='text-light' as={Link} to="manageinventory">Manage Inventory</Nav.Link>
 
-                <Nav.Link as={Link} to="addequipment">Add Equipment</Nav.Link>
+                <Nav.Link className='text-light' as={Link} to="addequipment">Add Equipment</Nav.Link>
+                
 
-                <Nav.Link as={Link} to="myitems">My Items</Nav.Link>
+                <Nav.Link className='text-light' as={Link} to="myitems">My Items</Nav.Link>
 
               </>
             }

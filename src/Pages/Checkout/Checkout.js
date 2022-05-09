@@ -37,8 +37,8 @@ const Checkout = () => {
     }
 
     return (
-        <div className='marginTop'>
-            <h2>Please Order your booking : {equipment.name}</h2>
+        <div className='marginTop w-75 mx-auto mb-5 bg-secondary p-5'>
+            <h2 className='text-center mb-5'>Please Stock your item : {equipment.name}</h2>
             <form onSubmit={handlePlaceOrder}>
                 <input className='w-100 mb-2' type="text" value={user?.displayName} name="name" placeholder='name' required readOnly disabled />
                 <br />
@@ -50,7 +50,7 @@ const Checkout = () => {
                 <br />
                 <input className='w-100 mb-2' type="text" name="phone" placeholder='phone' required />
                 <br />
-                <input className='btn btn-primary' type="submit" value="Place Order" />
+                <input className='btn btn-lg btn-warning mt-4 mx-auto d-block' type="submit" value="Stock Item" />
             </form>
         </div>
     );

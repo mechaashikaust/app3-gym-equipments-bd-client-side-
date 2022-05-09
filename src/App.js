@@ -17,6 +17,7 @@ import UpdateEquipment from './Pages/Home/UpdateEquipment/UpdateEquipment';
 import { ToastContainer } from 'react-toastify';
 import MyItems from './Pages/MyItems/MyItems';
 import Blog from './Pages/Blog/Blog'
+import ManageInventorySection from './Pages/ManageInventorySection/ManageInventorySection';
 
 function App() {
   return (
@@ -33,6 +34,10 @@ function App() {
 
 
         <Route path="/blog" element={<Blog></Blog>}></Route>
+
+        <Route path="/manageinventorysection" element={ <ManageInventorySection></ManageInventorySection> }></Route>
+
+
 
         <Route path="/checkout/:equipmentId" element=
           {

@@ -4,8 +4,7 @@ import sleeping from '../../../images/sleeping.jpg'
 const NotFound = () => {
     return (
         <div>
-            <h2 className='text-primary text-center'>Mechanic is Sleeping</h2>
-            <img className='w-100' src={sleeping} alt="" />
+            <img className='w-100 img-fluid' src={sleeping} alt="" />
         </div>
     );
 };

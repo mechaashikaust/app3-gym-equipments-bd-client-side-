@@ -26,7 +26,7 @@ const Blog = () => {
 
             <Card>
                 <Card.Header>
-                    <CustomToggle eventKey="0">Difference between authorization and authentication</CustomToggle>
+                    <CustomToggle eventKey="0"> Difference between javascript and nodejs</CustomToggle>
                 </Card.Header>
                 <Accordion.Collapse eventKey="0">
 
@@ -43,7 +43,7 @@ const Blog = () => {
 
             <Card>
                 <Card.Header>
-                    <CustomToggle eventKey="1">Why are you using firebase? What other options do you have to implement authentication?</CustomToggle>
+                    <CustomToggle eventKey="1">When should you use nodejs and when should you use mongodb ?</CustomToggle>
                 </Card.Header>
                 <Accordion.Collapse eventKey="1">
                     <Card.Body>
@@ -71,10 +71,39 @@ const Blog = () => {
  
             <Card>
                 <Card.Header>
-                    <CustomToggle eventKey="2">What other services does firebase provide other than authentication
+                    <CustomToggle eventKey="2">Differences between sql and nosql databases.
                     </CustomToggle>
                 </Card.Header>
                 <Accordion.Collapse eventKey="2">
+                    <Card.Body>
+                        <h6 className='text-dark'>
+                            Firebase is used for many purposes.<br></br>
+
+                            Firebase Database: used to store users data like chat messages, users details and other metadata<br></br>
+
+                            Firebase Cloud Storage: used to store user-generated content like the profile picture, multimedia messages, etc.<br></br>
+
+                            Firebase Cloud Messaging: used to send notification<br></br>
+
+                            Cloud Firestore.<br></br>
+                            Cloud Functions.<br></br>
+                            Authentication.<br></br>
+                            Hosting.<br></br>
+                            Google Analytics.
+                            Predictions.<br></br>
+                  
+                        </h6>
+                        <Card.Img className='img-fluid' src={image3} />
+                    </Card.Body>
+                </Accordion.Collapse>
+            </Card>
+
+            <Card>
+                <Card.Header>
+                    <CustomToggle eventKey="3">What is the purpose of jwt and how does it work?
+                    </CustomToggle>
+                </Card.Header>
+                <Accordion.Collapse eventKey="3">
                     <Card.Body>
                         <h6 className='text-dark'>
                             Firebase is used for many purposes.<br></br>

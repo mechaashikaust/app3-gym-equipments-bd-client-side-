@@ -5,7 +5,7 @@ import './Equipments.css'
 const Equipments = () => {
 
     const [equipments, setEquipments] = useState([]);
-
+ 
     useEffect(() => {
         fetch('https://mysterious-eyrie-16544.herokuapp.com/equipment')
             .then(res => res.json())
