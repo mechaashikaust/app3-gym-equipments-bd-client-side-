@@ -5,8 +5,9 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
 import SocialLogin from './SocialLogin/SocialLogin';
-import { ToastContainer, toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import axios from 'axios';
 
 const Login = () => {
 
@@ -26,12 +27,16 @@ const Login = () => {
     const passwordRef = useRef('');
     const navigate = useNavigate();
 
-    const handleSubmit = event => {
+    const handleSubmit = async event => {
         event.preventDefault();
         const email = emailRef.current.value;
         const password = passwordRef.current.value;
 
-        signInWithEmailAndPassword(email, password);
+        await signInWithEmailAndPassword(email, password);
+        const { data } = await axios.post('http://localhost:5000/login', { email });
+        console.log(data);
+        localStorage.setItem('accessToken', data.accessToken);
+        navigate(from, { replace: true });
     }
 
     const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(auth);
@@ -42,7 +47,7 @@ const Login = () => {
             await sendPasswordResetEmail(email);
             toast('Sent email');
         }
-        else{
+        else {
             toast('Please Enter your Email Address')
         }
     }
@@ -51,9 +56,9 @@ const Login = () => {
         navigate('/register');
     }
 
-    if (user) {
-        navigate(from, { replace: true });
-    }
+    // if (user) {
+
+    // }
 
     let errorElement;
     if (error) {
@@ -92,7 +97,6 @@ const Login = () => {
                 </Link>
             </p>
             <SocialLogin></SocialLogin>
-            <ToastContainer />
         </div>
     );
 };
