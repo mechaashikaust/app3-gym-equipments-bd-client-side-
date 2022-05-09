@@ -13,9 +13,9 @@ const Equipments = () => {
     }, []);
 
     return (
-        <div id="equipments" className='container'>
+        <div id="equipments" className='container mb-5'>
             <div className="row">
-                <h1 className='text-secondary text-center mt-5 mb-5'>Our Equipments</h1>
+                <h1 className='text-secondary text-center mt-5 mb-5'>Equipments</h1>
                 <div className='equipments-container'>
                     {
                         equipments.slice(0,6).map(equipment => <Equipment
