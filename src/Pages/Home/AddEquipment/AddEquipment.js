@@ -22,7 +22,7 @@ const AddEquipment = () => {
     }
 
     return (
-        <div className='w-50 mx-auto'>
+        <div className='w-50 mx-auto marginTop'>
             <h2>Please Add a Service</h2>
 
             <form className='d-flex flex-column' onSubmit={handleSubmit(onSubmit)}>

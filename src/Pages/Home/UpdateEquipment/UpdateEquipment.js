@@ -47,7 +47,7 @@ const UpdateEquipment = () => {
     console.log(user);
 
     return (
-        <div>
+        <div className='marginTop'>
             <h2>Updating User: {id}</h2>
 
             <form onSubmit={handleUpdateUser}>

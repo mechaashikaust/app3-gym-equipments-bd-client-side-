@@ -27,7 +27,7 @@ const ManageInventories = () => {
     }
 
     return (
-        <div className='w-50 mx-auto'>
+        <div className='w-50 mx-auto marginTop'>
             <h2>Manage Your Services</h2>
 
             {

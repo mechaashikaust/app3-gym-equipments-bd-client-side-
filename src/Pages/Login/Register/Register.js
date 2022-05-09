@@ -44,7 +44,7 @@ const Register = () => {
     }
 <b></b>
     return (
-        <div className='register-form'>
+        <div className='register-form marginTop'>
             <h2 className='text-center'>Please Registration</h2>
             <form onSubmit={handleRegister}>
                 <input type="text" name='name' placeholder='Your name' />

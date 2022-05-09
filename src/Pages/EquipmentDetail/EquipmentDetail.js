@@ -14,7 +14,7 @@ const EquipmentDetail = () => {
     }, [])
 
     return (
-        <div>
+        <div className='marginTop'>
             <h2>You are about to book: {service.name}</h2>
             <div className='text-center'>
                 <Link to={`/checkout/${equipmentId}`}>

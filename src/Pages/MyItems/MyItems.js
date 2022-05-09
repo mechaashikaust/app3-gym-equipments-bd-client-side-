@@ -38,7 +38,7 @@ const MyItems = () => {
     }, [user])
 
     return (
-        <div className='w-50 mx-auto'>
+        <div className='w-50 mx-auto marginTop'>
             <h2>Your orders: {orders.length}</h2>
             {/* {
                 orders.map(order => <div key={order._id}>

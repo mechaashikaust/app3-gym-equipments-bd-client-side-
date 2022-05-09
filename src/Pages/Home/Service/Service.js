@@ -9,15 +9,15 @@ const Service = ({ service }) => {
         navigate(`/equipment/${id}`);
     }
     return (
-        <div className='service'>
+        <div className='service bg-secondary'>
             <img className='w-100' src={img} alt="" />
             <h2>{name}</h2>
             <p>Price: {price}</p>
             <p><small>{description}</small></p>
-            <button onClick={() => handleNavigateToEquipmentDetail(_id)} className='btn btn-primary'>Book: {name}</button>
-            <Link to={`/updateequipment/${_id}`}> <button className='btn btn-secondary'>Update</button></Link>
+            <button onClick={() => handleNavigateToEquipmentDetail(_id)} className='btn btn-dark btn-gradient'>Book: {name}</button>
+            <Link to={`/updateequipment/${_id}`}> <button className='btn btn-dark btn-gradient'>Update</button></Link>
         </div>
     );
 };
-  
+
 export default Service;

@@ -37,7 +37,7 @@ const Checkout = () => {
     }
 
     return (
-        <div>
+        <div className='marginTop'>
             <h2>Please Order your booking : {service.name}</h2>
             <form onSubmit={handlePlaceOrder}>
                 <input className='w-100 mb-2' type="text" value={user?.displayName} name="name" placeholder='name' required readOnly disabled />
