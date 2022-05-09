@@ -65,8 +65,8 @@ const Login = () => {
     }
 
     return (
-        <div className='container w-50 mx-auto marginTop'>
-            <h2 className='text-primary text-center mt-3'>Please Login</h2>
+        <div className='container w-75 p-5 mx-auto marginTop bg-secondary'>
+            <h2 className='text-dark text-center fs-1 fw-bold mt-3 mb-4'>Please Login</h2>
             <Form onSubmit={handleSubmit}>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Control ref={emailRef} type="email" placeholder="Enter email" required />
@@ -76,7 +76,7 @@ const Login = () => {
                     <Form.Control ref={passwordRef} type="password" placeholder="Password" required />
                 </Form.Group>
 
-                <Button variant="primary w-50 d-block mx-auto mb-2" type="submit">
+                <Button variant="dark fw-bold fs-4 w-50 d-block mx-auto mb-2" type="submit">
                     Login
                 </Button>
             </Form>
@@ -84,14 +84,14 @@ const Login = () => {
                 errorElement
             }
             <p>
-                New to Genius Car?
-                <Link to="/register" className="text-primary text-decoration-none" onClick={navigateRegister}>
+                New to this warehouse?
+                <Link to="/register" className="text-dark text-decoration-none" onClick={navigateRegister}>
                     Please Register
                 </Link>
             </p>
             <p>
                 Forget Password?
-                <Link to="/login" className="text-primary text-decoration-none" onClick={resetPassword}>
+                <Link to="/login" className="text-dark text-decoration-none" onClick={resetPassword}>
                     Reset Password
                 </Link>
             </p>

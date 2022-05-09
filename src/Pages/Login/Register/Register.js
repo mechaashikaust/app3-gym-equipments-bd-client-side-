@@ -10,14 +10,16 @@ const Register = () => {
 
     const [agree, setAgree] = useState(false);
 
-    const [token] = useToken(user);
-
+    
+ 
     const [
         createUserWithEmailAndPassword,
         user,
         loading,
         error,
     ] = useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
+
+    const [token] = useToken(user);
 
     const navigate = useNavigate();
 
@@ -44,8 +46,8 @@ const Register = () => {
     }
 <b></b>
     return (
-        <div className='register-form marginTop'>
-            <h2 className='text-center'>Please Registration</h2>
+        <div className='register-form container mt-5 w-75 p-5 mx-auto marginTop bg-secondary'>
+            <h2 className='text-center mb-4'>Please Registration</h2>
             <form onSubmit={handleRegister}>
                 <input type="text" name='name' placeholder='Your name' />
 
@@ -54,13 +56,13 @@ const Register = () => {
                 <input type="password" name='password' placeholder='Password' required />
 
                 <input onClick={() => setAgree(!agree)} type="checkbox" name="terms" id="terms" />
-                <label className={`ps-2 ${agree ? '' : 'text-danger'}`} htmlFor="terms">Accept Terms and Condition</label>
+                <label className={`ps-2 ${agree ? '' : 'text-dark'}`} htmlFor="terms">Accept Terms and Condition</label>
 
-                <input disabled={!agree} className='w-50 mx-auto btn btn-primary mt-2' type="submit" value="Register" />
+                <input disabled={!agree} className='w-50 mx-auto btn btn-warning mt-2' type="submit" value="Register" />
             </form>
             <p> 
                 Already Registered?
-                <Link to="/login" className="text-primary text-decoration-none" onClick={navigateLogin}>
+                <Link to="/login" className="text-dark text-decoration-none" onClick={navigateLogin}>
                     Please Login
                 </Link>
             </p>

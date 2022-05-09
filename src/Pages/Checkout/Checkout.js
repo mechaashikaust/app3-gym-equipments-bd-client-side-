@@ -29,7 +29,7 @@ const Checkout = () => {
             .then(response => {
                 const { data } = response;
                 if (data.insertedId) {
-                    toast('Your Order is Booked');
+                    toast('Your item is Added');
                     event.target.reset();
                 }
             })
