@@ -18,7 +18,7 @@ const Equipments = () => {
                 <h1 className='text-secondary text-center mt-5 mb-5'>Our Equipments</h1>
                 <div className='equipments-container'>
                     {
-                        equipments.map(equipment => <Equipment
+                        equipments.slice(0,6).map(equipment => <Equipment
 
                             key={equipment._id}
                             equipment={equipment}

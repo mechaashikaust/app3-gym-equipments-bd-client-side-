@@ -8,6 +8,12 @@ const Equipment = ({ equipment }) => {
     const handleNavigateToEquipmentDetail = id => {
         navigate(`/equipment/${id}`);
     }
+   
+
+    
+
+    console.log(equipment);
+    
     return (
         <div className='equipment bg-secondary'>
             <img className='w-100' src={img} alt="" />
