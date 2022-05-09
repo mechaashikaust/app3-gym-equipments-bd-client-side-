@@ -1,7 +1,7 @@
 import React from 'react';
 import { useForm } from "react-hook-form";
 
-const AddService = () => {
+const AddEquipment = () => {
     const { register, handleSubmit } = useForm();
 
     const onSubmit = data => {
@@ -37,5 +37,5 @@ const AddService = () => {
         </div>
     );
 };
-
-export default AddService;
+ 
+export default AddEquipment;

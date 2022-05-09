@@ -2,7 +2,7 @@ import React from 'react';
 import { toast } from 'react-toastify';
 import userServices from '../../../Hooks/useServices';
 
-const ManageServices = () => {
+const ManageInventories = () => {
     const [services, setServices] = userServices();
 
     const handleDeleteService = id => {
@@ -45,4 +45,4 @@ const ManageServices = () => {
     );
 };
 
-export default ManageServices;
+export default ManageInventories;

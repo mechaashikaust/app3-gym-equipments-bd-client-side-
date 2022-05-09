@@ -1,0 +1,210 @@
+.slider-1{
+    position: absolute;
+    top: 20%;
+    left: 50%;
+}
+.slider-1 h3{
+    font-size: 70px;
+    font-weight: 800;
+}
+.slider-1 p{
+    font-size: 25px;
+    line-height: 1.9;
+    letter-spacing: 1.2px;
+}
+
+
+.slider-2{
+    position: absolute;
+    top: 20%;
+    left: -10%;
+}
+.slider-2 h3{
+    font-size: 70px;
+    font-weight: 800;
+}
+.slider-2 p{
+    font-size: 25px;
+    line-height: 1.9;
+    letter-spacing: 1.2px;
+}
+
+
+
+.slider-3{
+    position: absolute;
+    top: 20%;
+    left: -10%;
+}
+.slider-3 h3{
+    font-size: 70px;
+    font-weight: 800;
+    
+}
+.slider-3 p{
+    font-size: 25px;
+    line-height: 1.9;
+    letter-spacing: 1.2px;
+}
+
+
+/* make services responsive */
+@media only screen and (max-width:576px) {
+    .slider-1{
+        position: absolute;
+        top: 30%;
+        left: 0px;
+        width: 100%;
+    }
+    .slider-1 h3{
+        font-size: 30px;
+        font-weight: 800;
+        margin-left: 170px;
+    }
+    .slider-1 p{
+        font-size: 12px;
+    }
+    
+    
+    .slider-2{
+        position: absolute;
+        top: 24%;
+        left: 4%;
+        width: 88%;
+    }
+    .slider-2 h3{
+        font-size: 30px;
+        font-weight: 800;
+    }
+    .slider-2 p{
+        font-size: 12px;
+        line-height: 1.9;
+        letter-spacing: 1.2px;
+    }
+    
+    
+    
+    .slider-3{
+        position: absolute;
+        top: 18%;
+        left: 4%;
+        width: 88%;
+    }
+    .slider-3 h3{
+        font-size: 30px;
+        font-weight: 800;
+        
+    }
+    .slider-3 p{
+        font-size: 12px;
+        line-height: 1.9;
+        letter-spacing: 1.2px;
+    }
+}
+
+@media only screen and (min-width: 577px) and (max-width: 992px) {
+    .slider-1{
+        position: absolute;
+        top: 20%;
+        left: 0px;
+        width: 100%
+    }
+    .slider-1 h3{
+        font-size: 50px;
+        font-weight: 800;
+        margin-left: 180px;
+    }
+    .slider-1 p{
+        font-size: 18px;
+        line-height: 1.9;
+        letter-spacing: 1.2px;
+    }
+    
+    
+    .slider-2{
+        position: absolute;
+        top: 20%;
+        left: 0%;
+        width: 88%;
+    }
+    .slider-2 h3{
+        font-size: 50px;
+        font-weight: 800;
+    }
+    .slider-2 p{
+        font-size: 14px;
+        line-height: 1.9;
+        letter-spacing: 1.2px;
+    }
+    
+    
+    
+    .slider-3{
+        position: absolute;
+        top: 20%;
+        left: 0%;
+        width: 88%;
+    }
+    .slider-3 h3{
+        font-size: 40px;
+        font-weight: 800;
+        
+    }
+    .slider-3 p{
+        font-size: 14px;
+        line-height: 1.9;
+        letter-spacing: 1.2px;
+    }
+}
+
+@media only screen and (min-width: 993px) and (max-width: 1400px) {
+    .slider-1{
+        position: absolute;
+        top: 20%;
+        left: 15%;
+        width: 100%
+    }
+    .slider-1 h3{
+        font-size: 70px;
+        font-weight: 800;
+    }
+    .slider-1 p{
+        font-size: 25px;
+        line-height: 1.9;
+        letter-spacing: 1.2px;
+    }
+    
+    
+    .slider-2{
+        position: absolute;
+        top: 20%;
+        left: 0%;
+    }
+    .slider-2 h3{
+        font-size: 70px;
+        font-weight: 800;
+    }
+    .slider-2 p{
+        font-size: 25px;
+        line-height: 1.9;
+        letter-spacing: 1.2px;
+    }
+    
+    
+    
+    .slider-3{
+        position: absolute;
+        top: 20%;
+        left: 0%;
+    }
+    .slider-3 h3{
+        font-size: 70px;
+        font-weight: 800;
+        
+    }
+    .slider-3 p{
+        font-size: 25px;
+        line-height: 1.9;
+        letter-spacing: 1.2px;
+    }
+}

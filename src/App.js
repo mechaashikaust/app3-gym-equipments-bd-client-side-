@@ -1,6 +1,5 @@
 import './App.css';
 import { Route, Routes } from 'react-router-dom'
-import About from './Pages/About/About'
 import Home from './Pages/Home/Home/Home';
 import Login from './Pages/Login/Login'
 import Header from './Pages/Shared/Header/Header'
@@ -10,11 +9,12 @@ import NotFound from './Pages/Shared/NotFound/NotFound';
 import Register from './Pages/Login/Register/Register';
 import Checkout from './Pages/Checkout/Checkout';
 import RequireAuth from './Pages/Login/RequireAuth/RequireAuth';
-import AddService from './Pages/Home/AddService/AddService';
-import ManageServices from './Pages/Home/ManageServices/ManageServices';
+import AddEquipment from './Pages/Home/AddEquipment/AddEquipment';
+import ManageInventories from './Pages/Home/ManageInventories/ManageInventories';
 import UpdateService from './Pages/Home/UpdateService/UpdateService';
 import { ToastContainer } from 'react-toastify';
 import MyItems from './Pages/MyItems/MyItems';
+import Blog from './Pages/Blog/Blog'
 
 function App() {
   return (
@@ -26,9 +26,11 @@ function App() {
 
         <Route path='/equipment/:equipmentId' element={<ServiceDetail></ServiceDetail>}></Route>
 
-        <Route path="/about" element={<About></About>}></Route>
         <Route path="/login" element={<Login></Login>}></Route>
         <Route path="/register" element={<Register></Register>}></Route>
+
+
+        <Route path="/blog" element={ <Blog></Blog> }></Route>
 
         <Route path="/checkout/:equipmentId" element=
           {
@@ -38,18 +40,18 @@ function App() {
           }
         ></Route>
 
-        <Route path="/addservice" element=
+        <Route path="/addequipment" element=
           {
             <RequireAuth>
-              <AddService></AddService>
+              <AddEquipment></AddEquipment>
             </RequireAuth>
           }
         ></Route>
 
-        <Route path="/manageservice" element=
+        <Route path="/manageinventory" element=
           {
             <RequireAuth>
-              <ManageServices></ManageServices>
+              <ManageInventories></ManageInventories>
             </RequireAuth>
           }
         ></Route>

@@ -1,16 +1,17 @@
 import React, { useState } from 'react';
 import { Carousel } from 'react-bootstrap';
+import './Banner.css'
 
-import banner1 from '../../../images/banner/banner1.jpg'
-import banner2 from '../../../images/banner/banner2.jpg'
-import banner3 from '../../../images/banner/banner3.jpg'
+import banner1 from '../../../images/banner/banner-1.jpg'
+import banner2 from '../../../images/banner/banner-2.jpg'
+import banner3 from '../../../images/banner/banner-3.jpg'
 
 const Banner = () => {
 
     const [index, setIndex] = useState(0);
 
     const handleSelect = (selectedIndex, e) => {
-      setIndex(selectedIndex);
+        setIndex(selectedIndex);
     };
 
     return (
@@ -21,9 +22,9 @@ const Banner = () => {
                     src={banner1}
                     alt="First slide"
                 />
-                <Carousel.Caption>
-                    <h3>First slide label</h3>
-                    <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                <Carousel.Caption className='slider-1'>
+                    <h3 className='text-warning'>PERSONAL <br></br> TRAINING</h3>
+                    <p className='fw-bold'>Premium weight loss and lifestyle transformations<br></br> which create long lasting, dramatic results to your<br></br> health, body & mind.</p>
                 </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
@@ -33,9 +34,11 @@ const Banner = () => {
                     alt="Second slide"
                 />
 
-                <Carousel.Caption>
-                    <h3>Second slide label</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <Carousel.Caption className='slider-2'>
+                    <h3>Take Your Fitness <br></br> <span className='text-warning'>​To The Next Level</span></h3>
+                    <p className='fw-bold'>This is a private personal training studio in Dhaka <br></br>
+                        who help busy men and women stop "trying to get in shape".<br></br>
+                        and finally achieve a health and body transformation they won't rebound from...</p>
                 </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
@@ -45,10 +48,13 @@ const Banner = () => {
                     alt="Third slide"
                 />
 
-                <Carousel.Caption>
-                    <h3>Third slide label</h3>
-                    <p>
-                        Praesent commodo cursus magna, vel scelerisque nisl consectetur.
+                <Carousel.Caption className='slider-3'>
+                    <h3 className='text-warning'>GET A COACH. <br></br>
+                        GET CONSISTENT. <br></br>
+                        GET RESULT
+                    </h3>
+                    <p className='fw-bold'>
+                        I’ve helped hundreds of people to improve their relationship <br></br> with food and their bodies. But more than that, <br></br>they've extended their lives and put the spark back into their training.
                     </p>
                 </Carousel.Caption>
             </Carousel.Item>
