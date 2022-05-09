@@ -47,19 +47,19 @@ const UpdateEquipment = () => {
     console.log(user);
 
     return (
-        <div className='marginTop'>
-            <h2>Updating User: {id}</h2>
+        <div className='marginTop mx-auto text-center bg-secondary w-75 p-5'>
+            <h2 className='mb-5'>Update Item</h2>
 
-            <form onSubmit={handleUpdateUser}>
-                <input type="text" name='name' placeholder='Name' required />
+            <form className='mx-auto' onSubmit={handleUpdateUser}>
+                <input className='w-100 mb-3' type="text" name='name' placeholder='Name' required />
                 <br></br>
-                <input type="text" name='price' placeholder='Price' required />
+                <input className='w-100 mb-3' type="text" name='price' placeholder='Price' required />
                 <br></br>
-                <input type="text" name='description' placeholder='Descriptin' required />
+                <input className='w-100 mb-3' type="text" name='description' placeholder='Descriptin' required />
                 <br></br>
-                <input type="text" name='img' placeholder='Photo url' required />
+                <input className='w-100 mb-3' type="text" name='img' placeholder='Photo url' required />
                 <br></br>
-                <input type="submit" value='Update User' />
+                <input className='btn btn-warning btn-lg fw-bold btn-gradient' type="submit" value='Update User' />
             </form>
 
         </div>

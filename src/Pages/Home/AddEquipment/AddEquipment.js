@@ -22,8 +22,8 @@ const AddEquipment = () => {
     }
 
     return (
-        <div className='w-50 mx-auto marginTop'>
-            <h2>Please Add a Equipment</h2>
+        <div className='w-75 bg-secondary p-5 rounded mx-auto marginTop'>
+            <h2 className='text-center mb-5'>Please Add an Equipment</h2>
 
             <form className='d-flex flex-column' onSubmit={handleSubmit(onSubmit)}>
 
@@ -31,7 +31,7 @@ const AddEquipment = () => {
                 <textarea className='mb-2' placeholder='Description'  {...register("description", { required: true, maxLength: 20 })} />
                 <input className='mb-2' placeholder='Price' type="number" {...register("price")} />
                 <input className='mb-2' placeholder='Photo URL' type="text" {...register("img")} />
-                <input type="submit" value="Add Equipment" />
+                <input className='btn btn-warning btn-lg fw-bold btn-gradient' type="submit" value="Add Equipment" />
 
             </form>
         </div>

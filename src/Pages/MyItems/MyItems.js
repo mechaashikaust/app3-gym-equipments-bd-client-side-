@@ -1,9 +1,9 @@
 import axios from 'axios';
 import { signOut } from 'firebase/auth';
 import React, { useEffect, useState } from 'react';
+import { Table } from 'react-bootstrap';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useNavigate } from 'react-router-dom';
-// import axiosPrivate from '../../api/axiosPrivate';
 import auth from '../../firebase.init';
 
 const MyItems = () => {
@@ -32,19 +32,42 @@ const MyItems = () => {
                     navigate('/login')
                 }
             }
-        }
+        } 
         getOrders();
 
     }, [user])
 
+
     return (
         <div className='w-50 mx-auto marginTop'>
-            <h2>Your orders: {orders.length}</h2>
-            {/* {
+            <h2 className='text-center mb-4'>Your Total Items: {orders.length}</h2>
+            {
                 orders.map(order => <div key={order._id}>
-                    <p>{order.email} : {order.equipment}</p>
+
+                        <Table striped bordered hover variant="dark">
+                            <tbody>
+                                <tr>
+                                    <td><h6>Email</h6>
+                                        {order.email}
+                                    </td>
+                                    <td><h6>Item Name</h6>
+                                        {order.equipment}
+                                    </td>
+                                    <td><h6>Address</h6>
+                                        {order.address}
+                                    </td>
+                                    <td><h6>Phone</h6>
+                                        {order.phone}
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </Table>
+
                 </div>)
-            } */}
+            }
+
+
+
         </div>
     );
 };
