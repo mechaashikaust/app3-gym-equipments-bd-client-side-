@@ -1,16 +1,16 @@
 import { useEffect, useState } from "react";
 
 const useEquipmentDetail = equipmentId => {
-    const [service, setService] = useState({});
+    const [equipment, setEquipment] = useState({});
 
     useEffect(() => {
         const url = `https://mysterious-eyrie-16544.herokuapp.com/equipment/${equipmentId}`;
         fetch(url)
             .then(res => res.json())
-            .then(data => setService(data));
+            .then(data => setEquipment(data));
     }, [equipmentId]);
 
-    return [service, setService];
+    return [equipment, setEquipment];
 }
- 
+
 export default useEquipmentDetail;

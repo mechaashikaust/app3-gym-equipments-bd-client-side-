@@ -1,4 +1,4 @@
-.services-container{
+.equipments-container{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 20px;
@@ -8,15 +8,15 @@ body{
     background-color: black;
 }
 
-/* make services responsive */
+/* make equipments responsive */
 @media only screen and (max-width:576px) {
-    .services-container{
+    .equipments-container{
         grid-template-columns: repeat(1, 1fr);
     }
 }
  
 @media only screen and (min-width: 577px) and (max-width: 992px) {
-    .services-container{
+    .equipments-container{
         grid-template-columns: repeat(2, 1fr);
     }
 }

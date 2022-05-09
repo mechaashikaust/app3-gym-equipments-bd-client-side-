@@ -36,13 +36,13 @@ const MyItems = () => {
         getOrders();
 
     }, [user])
- 
+
     return (
         <div className='w-50 mx-auto marginTop'>
             <h2>Your orders: {orders.length}</h2>
             {/* {
                 orders.map(order => <div key={order._id}>
-                    <p>{order.email} : {order.service}</p>
+                    <p>{order.email} : {order.equipment}</p>
                 </div>)
             } */}
         </div>

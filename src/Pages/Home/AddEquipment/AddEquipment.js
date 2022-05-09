@@ -18,12 +18,12 @@ const AddEquipment = () => {
             .then(result => {
                 console.log(result)
             });
- 
+
     }
 
     return (
         <div className='w-50 mx-auto marginTop'>
-            <h2>Please Add a Service</h2>
+            <h2>Please Add a Equipment</h2>
 
             <form className='d-flex flex-column' onSubmit={handleSubmit(onSubmit)}>
 
@@ -31,11 +31,11 @@ const AddEquipment = () => {
                 <textarea className='mb-2' placeholder='Description'  {...register("description", { required: true, maxLength: 20 })} />
                 <input className='mb-2' placeholder='Price' type="number" {...register("price")} />
                 <input className='mb-2' placeholder='Photo URL' type="text" {...register("img")} />
-                <input type="submit" value="Add Service" />
+                <input type="submit" value="Add Equipment" />
 
             </form>
         </div>
     );
 };
- 
+
 export default AddEquipment;

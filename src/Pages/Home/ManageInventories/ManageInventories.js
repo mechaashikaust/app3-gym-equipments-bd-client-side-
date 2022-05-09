@@ -1,11 +1,11 @@
 import React from 'react';
 import { toast } from 'react-toastify';
 import useTotalitems from '../../../Hooks/useTotalitems';
- 
-const ManageInventories = () => {
-    const [services, setServices] = useTotalitems();
 
-    const handleDeleteService = id => {
+const ManageInventories = () => {
+    const [equipments, setEquipments] = useTotalitems();
+
+    const handleDeleteEquipment = id => {
 
         const proceed = window.confirm("Are you Sure?");
 
@@ -18,24 +18,24 @@ const ManageInventories = () => {
                 .then(res => res.json())
                 .then(result => {
 
-                    const remaining = services.filter(service => service._id !== id);
-                    setServices(remaining);
+                    const remaining = equipments.filter(equipment => equipment._id !== id);
+                    setEquipments(remaining);
                     toast('Supper , Successfully Deleted. Congoooooo');
 
                 });
         }
     }
- 
+
     return (
         <div className='w-50 mx-auto marginTop'>
-            <h2>Manage Your Services</h2>
+            <h2>Manage Your Equipments</h2>
 
             {
-                services.map(service => <div key={service._id}>
+                equipments.map(equipment => <div key={equipment._id}>
 
                     <h5>
-                        {service.name}
-                        <button onClick={() => handleDeleteService(service._id)} >X</button>
+                        {equipment.name}
+                        <button onClick={() => handleDeleteEquipment(equipment._id)} >X</button>
                     </h5>
 
                 </div>)

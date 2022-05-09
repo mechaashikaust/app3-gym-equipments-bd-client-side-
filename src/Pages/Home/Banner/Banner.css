@@ -48,7 +48,7 @@
 }
 
  
-/* make services responsive */
+/* make equipments responsive */
 @media only screen and (max-width:576px) {
     .slider-1{
         position: absolute;

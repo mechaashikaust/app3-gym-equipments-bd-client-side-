@@ -2,15 +2,15 @@ import { useEffect, useState } from "react";
 
 const useTotalitems = () => {
 
-    const [services, setServices] = useState([]);
+    const [equipments, setEquipments] = useState([]);
 
     useEffect(() => {
         fetch('https://mysterious-eyrie-16544.herokuapp.com/equipment')
             .then(res => res.json())
-            .then(data => setServices(data));
+            .then(data => setEquipments(data));
     }, []);
 
-    return [services, setServices];
+    return [equipments, setEquipments];
 }
- 
+
 export default useTotalitems;
