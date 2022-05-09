@@ -5,7 +5,7 @@ import './Service.css';
 const Service = ({ service }) => {
     const { _id, name, img, description, price } = service;
     const navigate = useNavigate();
-    const handleNavigateToServiceDetail = id => {
+    const handleNavigateToEquipmentDetail = id => {
         navigate(`/equipment/${id}`);
     }
     return (
@@ -14,12 +14,10 @@ const Service = ({ service }) => {
             <h2>{name}</h2>
             <p>Price: {price}</p>
             <p><small>{description}</small></p>
-            <button onClick={() => handleNavigateToServiceDetail(_id)} className='btn btn-primary'>Book: {name}</button>
-            <Link to={`/updateservice/${_id}`}> <button className='btn btn-secondary'>Update</button></Link>
+            <button onClick={() => handleNavigateToEquipmentDetail(_id)} className='btn btn-primary'>Book: {name}</button>
+            <Link to={`/updateequipment/${_id}`}> <button className='btn btn-secondary'>Update</button></Link>
         </div>
     );
 };
-
+  
 export default Service;
-
-// updateservice

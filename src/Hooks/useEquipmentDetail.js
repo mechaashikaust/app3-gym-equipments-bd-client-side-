@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-const useServiceDetail = equipmentId => {
+const useEquipmentDetail = equipmentId => {
     const [service, setService] = useState({});
 
     useEffect(() => {
@@ -13,4 +13,4 @@ const useServiceDetail = equipmentId => {
     return [service, setService];
 }
 
-export default useServiceDetail;
+export default useEquipmentDetail;

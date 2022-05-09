@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 
-const ServiceDetail = () => {
+const EquipmentDetail = () => {
 
     const { equipmentId } = useParams();
     const [service, setService] = useState({});
@@ -25,4 +25,4 @@ const ServiceDetail = () => {
     );
 };
 
-export default ServiceDetail;
+export default EquipmentDetail;

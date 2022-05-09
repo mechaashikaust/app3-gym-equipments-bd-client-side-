@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-const UpdateService = () => {
+const UpdateEquipment = () => {
 
     const { id } = useParams();
 
@@ -66,4 +66,4 @@ const UpdateService = () => {
     );
 };
 
-export default UpdateService;
+export default UpdateEquipment;
