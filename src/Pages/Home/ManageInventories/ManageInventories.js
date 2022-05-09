@@ -1,9 +1,9 @@
 import React from 'react';
 import { toast } from 'react-toastify';
-import userServices from '../../../Hooks/useServices';
-
+import useTotalitems from '../../../Hooks/useTotalitems';
+ 
 const ManageInventories = () => {
-    const [services, setServices] = userServices();
+    const [services, setServices] = useTotalitems();
 
     const handleDeleteService = id => {
 
@@ -25,7 +25,7 @@ const ManageInventories = () => {
                 });
         }
     }
-
+ 
     return (
         <div className='w-50 mx-auto marginTop'>
             <h2>Manage Your Services</h2>

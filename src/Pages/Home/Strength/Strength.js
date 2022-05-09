@@ -21,7 +21,7 @@ const Mission = () => {
                         <div className="col-lg-6">
                             <div className="about-image">
                                 <img className='img-fluid' src={imageofSection} alt="" />
-
+ 
                             </div>
                         </div>
 

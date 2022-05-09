@@ -18,7 +18,7 @@ const AddEquipment = () => {
             .then(result => {
                 console.log(result)
             });
-
+ 
     }
 
     return (

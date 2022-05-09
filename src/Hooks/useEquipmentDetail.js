@@ -12,5 +12,5 @@ const useEquipmentDetail = equipmentId => {
 
     return [service, setService];
 }
-
+ 
 export default useEquipmentDetail;

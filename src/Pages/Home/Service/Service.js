@@ -19,5 +19,5 @@ const Service = ({ service }) => {
         </div>
     );
 };
-
+  
 export default Service;

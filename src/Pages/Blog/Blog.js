@@ -68,7 +68,7 @@ const Blog = () => {
                     </Card.Body>
                 </Accordion.Collapse>
             </Card>
-
+ 
             <Card>
                 <Card.Header>
                     <CustomToggle eventKey="2">What other services does firebase provide other than authentication

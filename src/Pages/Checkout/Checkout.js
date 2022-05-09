@@ -11,7 +11,7 @@ const Checkout = () => {
     const { equipmentId } = useParams();
 
     const [service] = useEquipmentDetail(equipmentId);
-
+ 
     const [user] = useAuthState(auth);
 
     const handlePlaceOrder = event => {

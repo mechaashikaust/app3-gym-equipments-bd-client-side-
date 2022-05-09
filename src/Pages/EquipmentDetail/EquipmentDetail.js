@@ -5,7 +5,7 @@ const EquipmentDetail = () => {
 
     const { equipmentId } = useParams();
     const [service, setService] = useState({});
-
+ 
     useEffect(() => {
         const url = `https://mysterious-eyrie-16544.herokuapp.com/equipment/${equipmentId}`;
         fetch(url)

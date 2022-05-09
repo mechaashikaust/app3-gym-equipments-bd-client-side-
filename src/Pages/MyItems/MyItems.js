@@ -36,7 +36,7 @@ const MyItems = () => {
         getOrders();
 
     }, [user])
-
+ 
     return (
         <div className='w-50 mx-auto marginTop'>
             <h2>Your orders: {orders.length}</h2>

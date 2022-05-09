@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-const useServices = () => {
+const useTotalitems = () => {
 
     const [services, setServices] = useState([]);
 
@@ -12,5 +12,5 @@ const useServices = () => {
 
     return [services, setServices];
 }
-
-export default useServices;
+ 
+export default useTotalitems;
