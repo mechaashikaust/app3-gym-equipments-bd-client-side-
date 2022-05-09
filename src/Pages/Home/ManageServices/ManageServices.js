@@ -10,7 +10,7 @@ const ManageServices = () => {
         const proceed = window.confirm("Are you Sure?");
 
         if (proceed) {
-            const url = `http://localhost:5000/equipment/${id}`;
+            const url = `https://mysterious-eyrie-16544.herokuapp.com/equipment/${id}`;
 
             fetch(url, {
                 method: 'DELETE'
@@ -40,7 +40,7 @@ const ManageServices = () => {
 
                 </div>)
             }
-            
+
         </div>
     );
 };

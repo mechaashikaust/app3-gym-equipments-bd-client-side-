@@ -2,16 +2,16 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 const UpdateService = () => {
 
-    const {id} = useParams();
+    const { id } = useParams();
 
     const [user, setUser] = useState({});
 
-    useEffect( () => {
-        const url = `http://localhost:5000/equipment/${id}`
+    useEffect(() => {
+        const url = `https://mysterious-eyrie-16544.herokuapp.com/equipment/${id}`
         fetch(url)
-        .then(response => response.json())
-        .then(data => setUser(data));
-    },[])
+            .then(response => response.json())
+            .then(data => setUser(data));
+    }, [])
 
 
     const handleUpdateUser = event => {
@@ -24,7 +24,7 @@ const UpdateService = () => {
         const uupdatedUser = { name, price, description, img };
 
         // send data to the server
-        const url = `http://localhost:5000/equipment/${id}`
+        const url = `https://mysterious-eyrie-16544.herokuapp.com/equipment/${id}`
         fetch(url, {
             method: 'PUT', // or 'PUT'
             headers: {

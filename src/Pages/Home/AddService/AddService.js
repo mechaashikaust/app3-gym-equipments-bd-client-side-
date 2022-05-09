@@ -6,7 +6,7 @@ const AddService = () => {
 
     const onSubmit = data => {
 
-        const url = `http://localhost:5000/equipment`;
+        const url = `https://mysterious-eyrie-16544.herokuapp.com/equipment`;
         fetch(url, {
             method: 'POST',
             headers: {

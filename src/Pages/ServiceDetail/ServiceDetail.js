@@ -6,8 +6,8 @@ const ServiceDetail = () => {
     const { equipmentId } = useParams();
     const [service, setService] = useState({});
 
-    useEffect( () => {
-        const url = `http://localhost:5000/equipment/${equipmentId}`;
+    useEffect(() => {
+        const url = `https://mysterious-eyrie-16544.herokuapp.com/equipment/${equipmentId}`;
         fetch(url)
             .then(res => res.json())
             .then(data => setService(data));
