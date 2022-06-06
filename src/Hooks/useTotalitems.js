@@ -11,6 +11,6 @@ const useTotalitems = () => {
     }, []);
 
     return [equipments, setEquipments];
-}
+} 
 
 export default useTotalitems;

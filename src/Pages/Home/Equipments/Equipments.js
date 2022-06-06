@@ -7,7 +7,7 @@ const Equipments = () => {
     const [equipments, setEquipments] = useState([]);
  
     useEffect(() => {
-        fetch('https://mysterious-eyrie-16544.herokuapp.com/equipment')
+        fetch('http://localhost:5000/equipment')
             .then(res => res.json())
             .then(data => setEquipments(data));
     }, []);

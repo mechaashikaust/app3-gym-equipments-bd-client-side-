@@ -37,5 +37,5 @@ const AddEquipment = () => {
         </div>
     );
 };
-
+ 
 export default AddEquipment;

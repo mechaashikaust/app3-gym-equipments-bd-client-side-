@@ -10,7 +10,7 @@ const ManageInventories = () => {
     const handleDeleteEquipment = id => {
 
         const proceed = window.confirm("Are you Sure?");
-
+ 
         if (proceed) {
             const url = `https://mysterious-eyrie-16544.herokuapp.com/equipment/${id}`;
 
@@ -56,8 +56,6 @@ const ManageInventories = () => {
                                 </tr>
                             </tbody>
                         </Table>
-
-
 
 
                     </div>
